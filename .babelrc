@@ -1,0 +1,30 @@
+{
+    //抽离
+    "presets":[
+        [
+            "@babel/preset-env"
+            // {"useBuiltIns": "entry" }
+        ],
+        "@babel/preset-react"   //React语法库
+    ],
+    //配置装饰器语法
+    "plugins":[
+        [
+            "@babel/plugin-proposal-decorators",{"legacy":true}  //按需加载
+        ],
+        //配置runtime环境   支持 awite 等
+        [
+            "@babel/plugin-transform-runtime",
+            {
+            "absoluteRuntime": false,
+            "corejs": 2,
+            "helpers": true,
+            "regenerator": true,
+            "useESModules": false
+            }
+            ]
+            
+
+    ]
+    
+}
